@@ -1,0 +1,23 @@
+<div class="flex-container">
+        <div class="row background-blue login">
+            <div>
+              <%= form_tag login_path do %>
+                <div class="field">
+                  <%= label_tag :username %><br />
+                  <%= text_field_tag :username ,"", class:"custom-input"%>
+                </div>
+                <div class="field">
+                  <%= label_tag :password %><br />
+                  <%= password_field_tag :password ,"", class:"custom-input"%>
+                </div>
+                <div><%= submit_tag "Log In", class:"login-button" %></div>
+              <% end %>
+
+              <% flash.each do |key, value| %>
+                  <div class="flash <%= key %>"><%= value %></div>
+              <% end %>
+            </div>
+        </div>
+</div>
+
+
