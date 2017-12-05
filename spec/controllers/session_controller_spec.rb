@@ -19,6 +19,11 @@ RSpec.describe SessionController do
       			expect(session[:user_id]).to eq nil
 			  end
 			  
+			  it 'POST #create user empty' do
+			  	post :create, params: { username: "" , password: password_OK}
+      			expect(flash[:alert]).to eq "Username or password is empty"
+			  end
+
 			  it 'POST #create bad user' do
 			  	post :create, params: { username: username_Fail , password: password_OK}
       			expect(flash[:alert]).to eq "Username or password is invalid"
