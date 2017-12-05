@@ -61,3 +61,15 @@ input{
 .right{
     float:right;
 }
+
+.button{
+    text-decoration: none;
+    padding: 10px;
+    font-weight: 600;
+    font-size: 20px;
+    color: #ADD8E6;
+    background-color: white;
+    border-radius: 6px;
+    border: 2px solid white;
+    margin: 20px;
+  }

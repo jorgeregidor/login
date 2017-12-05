@@ -6,7 +6,7 @@ class SessionController < ApplicationController
 
   def create
   	if params[:username].empty? || params[:password].empty?
-  		flash.now.alert = 'Username or password are empty'
+  		flash.now.alert = 'Username or password is empty'
   		render :new
   	else
 	  	user = User.find_by(username: params[:username])
